@@ -10,7 +10,7 @@ import datetime
 import dateutil.relativedelta as relativedelta
 
 from werkzeug import urls
-from odoo.tools import pycompat
+#from odoo.tools import pycompat
 from odoo import _, api, fields, models, tools
 from odoo.exceptions import UserError
 
@@ -31,7 +31,7 @@ class MailTemplate(models.Model):
         """
         self.ensure_one()
         multi_mode = True
-        if isinstance(res_ids, pycompat.integer_types):
+        if isinstance(res_ids, int):
             res_ids = [res_ids]
             multi_mode = False
         if fields is None:
